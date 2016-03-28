@@ -15,6 +15,8 @@ supports 'amazon'
 supports 'oracle'
 
 depends 'ark'
+depends 'build-essential'
+depends 'cpan'
 
 source_url 'https://github.com/tas50/chef-pulledpork' if respond_to?(:source_url)
 issues_url 'https://github.com/tas50/chef-pulledpork/issues' if respond_to?(:issues_url)

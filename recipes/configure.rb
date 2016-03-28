@@ -12,7 +12,7 @@ template node['pulledpork']['pp_config_path'] do
   source 'pulledpork.conf.erb'
   owner 'root'
   group 'root'
-  mode '0640'
+  mode '0644'
   notifies :run, 'bash[run_pulledpork]'
 end
 
