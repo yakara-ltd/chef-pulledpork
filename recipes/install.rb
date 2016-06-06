@@ -1,11 +1,13 @@
 
 
-if [ 'fedora', 'rhel' ].include? node['platform_family'] 
-  package 'perl-Sys-Syslog'
-  package 'perl-Archive-Tar'
-  package 'perl-LWP-Protocol-https'
-  package 'perl-Mozilla-CA'
-  package 'openssl-devel'
+if platform_family?('fedora', 'rhel')
+  package [
+    'openssl-devel',
+    'perl-Archive-Tar',
+    'perl-LWP-Protocol-https',
+    'perl-Mozilla-CA',
+    'perl-Sys-Syslog'
+  ]
 
   if platform_family?('rhel')
     include_recipe 'build-essential'
