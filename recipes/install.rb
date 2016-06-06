@@ -1,9 +1,6 @@
 
 
 if [ 'fedora', 'rhel' ].include? node['platform_family'] 
-  package 'perl-libwww-perl' do
-    action :remove
-  end
   package 'perl-Sys-Syslog'
   package 'perl-Archive-Tar'
   package 'perl-LWP-Protocol-https'
